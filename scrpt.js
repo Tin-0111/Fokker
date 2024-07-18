@@ -3,18 +3,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const betButton = document.getElementById('bet-button');
     const playerHand = document.getElementById('player-hand');
     const betAmountInput = document.getElementById('bet-amount');
+    const playerChipsDisplay = document.getElementById('player-chips');
 
     let playerCards = [];
     let playerChips = 1000;
 
+    const suits = {
+        'hearts': '♥',
+        'diamonds': '♦',
+        'clubs': '♣',
+        'spades': '♠'
+    };
+
     function createDeck() {
-        const suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
+        const suits = ['hearts', 'diamonds', 'clubs', 'spades'];
         const values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
         const deck = [];
 
         for (let suit of suits) {
             for (let value of values) {
-                deck.push(`${value} of ${suit}`);
+                deck.push({ value, suit });
             }
         }
 
@@ -39,8 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
         playerHand.innerHTML = '';
         playerCards.forEach(card => {
             const cardElement = document.createElement('div');
-            cardElement.className = 'card';
-            cardElement.textContent = card;
+            cardElement.className = `card ${card.suit}`;
+            cardElement.textContent = `${card.value}${suits[card.suit]}`;
             playerHand.appendChild(cardElement);
         });
     }
@@ -49,9 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const betAmount = parseInt(betAmountInput.value, 10);
         if (betAmount > 0 && betAmount <= playerChips) {
             playerChips -= betAmount;
-            alert(`You bet ${betAmount} chips. You have ${playerChips} chips left.`);
+            playerChipsDisplay.textContent = `보유 칩: ${playerChips}`;
+            alert(`베팅 금액: ${betAmount} 칩. 남은 칩: ${playerChips} 칩.`);
         } else {
-            alert('Invalid bet amount.');
+            alert('유효한 베팅 금액이 아닙니다.');
         }
     }
 
