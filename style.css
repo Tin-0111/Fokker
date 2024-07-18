@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2E8B57;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+#game {
+    margin-bottom: 20px;
+}
+
+#player-hand {
+    margin: 20px 0;
+}
+
+#actions button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#betting {
+    margin-top: 10px;
+}
+
+#betting input {
+    padding: 5px;
+    font-size: 16px;
+}
+
+#poker-hands {
+    margin-top: 20px;
+}
+
+#poker-hands ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#poker-hands li {
+    margin: 5px 0;
+}
