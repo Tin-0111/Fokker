@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poker Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Poker Game</h1>
+        <div id="game">
+            <div id="player-hand"></div>
+            <div id="actions">
+                <button id="deal-button">Deal Cards</button>
+                <button id="bet-button">Bet</button>
+            </div>
+            <div id="betting">
+                <label for="bet-amount">Bet Amount:</label>
+                <input type="number" id="bet-amount" value="10">
+            </div>
+        </div>
+        <div id="poker-hands">
+            <h2>Poker Hands</h2>
+            <ul>
+                <li>Royal Flush</li>
+                <li>Straight Flush</li>
+                <li>Four of a Kind</li>
+                <li>Full House</li>
+                <li>Flush</li>
+                <li>Straight</li>
+                <li>Three of a Kind</li>
+                <li>Two Pair</li>
+                <li>One Pair</li>
+                <li>High Card</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
