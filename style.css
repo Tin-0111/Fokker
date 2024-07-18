@@ -21,6 +21,28 @@ body {
     margin: 20px 0;
 }
 
+.card {
+    display: inline-block;
+    width: 60px;
+    height: 90px;
+    margin: 0 5px;
+    background-color: white;
+    color: black;
+    font-size: 24px;
+    line-height: 90px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.card.spades, .card.clubs {
+    color: black;
+}
+
+.card.hearts, .card.diamonds {
+    color: red;
+}
+
 #actions button {
     margin: 5px;
     padding: 10px 20px;
@@ -36,6 +58,11 @@ body {
     font-size: 16px;
 }
 
+#player-chips {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
 #poker-hands {
     margin-top: 20px;
 }
@@ -47,4 +74,11 @@ body {
 
 #poker-hands li {
     margin: 5px 0;
+}
+
+.hand {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
 }
