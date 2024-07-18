@@ -1,38 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poker Game</title>
+    <title>포커 게임</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Poker Game</h1>
+        <h1>포커 게임</h1>
         <div id="game">
             <div id="player-hand"></div>
             <div id="actions">
-                <button id="deal-button">Deal Cards</button>
-                <button id="bet-button">Bet</button>
+                <button id="deal-button">카드 나누기</button>
+                <button id="bet-button">베팅</button>
             </div>
             <div id="betting">
-                <label for="bet-amount">Bet Amount:</label>
+                <label for="bet-amount">베팅 금액:</label>
                 <input type="number" id="bet-amount" value="10">
             </div>
+            <div id="player-chips">보유 칩: 1000</div>
         </div>
         <div id="poker-hands">
-            <h2>Poker Hands</h2>
+            <h2>포커 족보</h2>
             <ul>
-                <li>Royal Flush</li>
-                <li>Straight Flush</li>
-                <li>Four of a Kind</li>
-                <li>Full House</li>
-                <li>Flush</li>
-                <li>Straight</li>
-                <li>Three of a Kind</li>
-                <li>Two Pair</li>
-                <li>One Pair</li>
-                <li>High Card</li>
+                <li>로열 플러시 <div class="hand">A♠ K♠ Q♠ J♠ 10♠</div></li>
+                <li>스트레이트 플러시 <div class="hand">9♠ 8♠ 7♠ 6♠ 5♠</div></li>
+                <li>포카드 <div class="hand">A♠ A♣ A♦ A♥ 2♠</div></li>
+                <li>풀 하우스 <div class="hand">K♠ K♦ K♣ 2♠ 2♣</div></li>
+                <li>플러시 <div class="hand">A♠ K♠ Q♠ 9♠ 2♠</div></li>
+                <li>스트레이트 <div class="hand">A♠ K♦ Q♣ J♥ 10♠</div></li>
+                <li>트리플 <div class="hand">A♠ A♣ A♦ 9♠ 2♣</div></li>
+                <li>투페어 <div class="hand">A♠ A♣ K♦ K♠ 2♣</div></li>
+                <li>원페어 <div class="hand">A♠ A♣ 9♦ 6♠ 2♣</div></li>
+                <li>하이카드 <div class="hand">A♠ K♦ Q♣ 9♥ 2♠</div></li>
             </ul>
         </div>
     </div>
